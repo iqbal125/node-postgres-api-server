@@ -1,1 +1,1 @@
-# node-postgres-api-server
+complete authentication using postgres, node, express, passport and more. 
