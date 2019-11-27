@@ -1,4 +1,5 @@
 var express = require('express');
+require('dotenv').config();
 var cors = require('cors');
 var bodyParser = require('body-parser');
 const passport = require('passport');
@@ -15,8 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
-//uncomment if want to use sessions
-// app.use(passport.session())
 app.use('/', auth);
 
 //server setup
