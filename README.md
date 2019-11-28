@@ -1,1 +1,1 @@
-complete authentication using postgres, node, express, passport and more. 
+jwt firebase authentication with a decoupled front end app. 
