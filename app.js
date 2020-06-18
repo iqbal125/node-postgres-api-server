@@ -3,9 +3,7 @@ require('dotenv').config();
 var cors = require('cors');
 var bodyParser = require('body-parser');
 const passport = require('passport');
-const sgMail = require('@sendgrid/mail');
 const auth = require('./Authentication/auth_routes');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
 
