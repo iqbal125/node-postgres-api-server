@@ -4,13 +4,13 @@ const JWTStrategy = require('passport-jwt').Strategy;
 const db = require('../db.js');
 const jwt = require('jsonwebtoken');
 
-const setToken = user => {
+const setToken = (user) => {
   let opts = {
     expiresIn: '12h'
   };
   let secret = process.env.AUTH_SECRET;
 
-  return jwt.sign(user, secret);
+  return jwt.sign(user, secret, opts);
 };
 
 const requireAuth = passport.authenticate('jwt', { session: false });
