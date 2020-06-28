@@ -6,11 +6,11 @@ const jwt = require('jsonwebtoken');
 
 const setToken = (user) => {
   let opts = {
-    expiresIn: '12h'
+    expiresIn: '7d'
   };
   let secret = process.env.AUTH_SECRET;
 
-  return jwt.sign(user, secret, opts);
+  return jwt.sign({ user }, secret, opts);
 };
 
 const requireAuth = passport.authenticate('jwt', { session: false });
