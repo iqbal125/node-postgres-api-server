@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 
-app.use('/', auth);
+app.use('/auth', auth);
 
 //server setup
 const port = process.env.PORT || 3000;
