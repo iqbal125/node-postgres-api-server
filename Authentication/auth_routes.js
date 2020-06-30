@@ -1,4 +1,4 @@
-const db = require('../db.js');
+const db = require('../Database/db.js');
 
 const requireAuth = require('./passport_config').requireAuth;
 const setToken = require('./passport_config').setToken;
@@ -9,23 +9,25 @@ const admin = firebase.initializeApp();
 const express = require('express');
 const router = express.Router();
 
+//Example of authenticated route
 router.get('/private', requireAuth, (req, res) => {
   res.send('Accessed Private Endpoint');
 });
 
+//sign in or sign up user then send jwt token
 router.post('/sendtoken', (req, res) => {
   let token = req.body.token;
 
   admin
     .auth()
     .verifyIdToken(token)
-    .then(decodedToken => {
+    .then((decodedToken) => {
       let name = decodedToken.name;
       let email = decodedToken.email;
 
       saveUsertoDB(email, name);
     })
-    .catch(error => {
+    .catch((error) => {
       res.send('error loggin in');
       console.log(error);
     });
