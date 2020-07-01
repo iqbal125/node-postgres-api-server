@@ -4,6 +4,7 @@ var cors = require('cors');
 var bodyParser = require('body-parser');
 const passport = require('passport');
 const auth = require('./Authentication/auth_routes');
+const todo_api = require('./API/todos');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(passport.initialize());
 
 //Authentication
 app.use('/auth', auth);
+app.use('/api', todo_api);
 
 //server setup
 const port = process.env.PORT || 3000;

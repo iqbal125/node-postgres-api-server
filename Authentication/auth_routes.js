@@ -24,6 +24,7 @@ router.post('/sendtoken', (req, res) => {
     .then((decodedToken) => {
       let name = decodedToken.name;
       let email = decodedToken.email;
+      console.log(name, email);
 
       saveUsertoDB(email, name);
     })
@@ -51,6 +52,7 @@ router.post('/sendtoken', (req, res) => {
     //signup user, called inside callback1
     let callback2 = (q_err, q_res) => {
       if (q_err) {
+        console.log(q_err);
         res.status(500).send(q_err);
       }
       //send back user id after signup
@@ -65,6 +67,7 @@ router.post('/sendtoken', (req, res) => {
     //Check if user exists callback
     let callback1 = (q_err, q_res) => {
       if (q_err) {
+        console.log(q_err);
         res.status(500).send(q_err);
       }
       if (q_res.rows.length != 0) {
