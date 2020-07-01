@@ -5,7 +5,7 @@ var db = require('../Database/db');
 const requireAuth = require('../Authentication/passport_config').requireAuth;
 
 /* 
-To make authenticated requests simply add requireAuth as the second arguement in router()
+To make authenticated request simply add requireAuth as the second arguement in router()
 
 router.get('/get/todos', requireAuth, getTodos);
 */
