@@ -1,8 +1,8 @@
+
+Node-Express Authentication and CRUD API Server to Postgres Database. 
+
 Companion Server to Decoupled React Gatsby Front End App.
 
-Can Also be Used as stand alone authentication and CRUD API server.  
-
-Node-Express API Server to Postgres Database. 
 
 ## Features
 -Server Side Auth token verification with Firebase Admin\
