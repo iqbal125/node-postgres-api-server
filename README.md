@@ -16,7 +16,7 @@ Companion Server to Decoupled React Gatsby Front End App.
 ### Postgres Setup (Required)
 https://www.postgresql.org/
 
-1. I will assume basic Postgres knowledge and that it is already setup
+1. I will assume basic Postgres knowledge and that the Database is already setup
 2. Subsitute Postgres credentials into .env.example and rename file to .env
 3. Create Tables based on commmands found in /Database/schema.sql file 
 4. Set any AUTH_SECRET you wish
