@@ -25,4 +25,4 @@ Companion Server to Decoupled React Gatsby Front End App.
 https://firebase.google.com/
 
 1. Simply log in to the console
-2. 
+2. Write Firebase Project-ID to .env file
