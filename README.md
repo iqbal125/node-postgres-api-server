@@ -10,6 +10,6 @@ Node-Express API Server to Postgres Database.
 -Passport JWT verification\
 -Authenticated API requests\
 -Returns JWT token on successful Auth \
--No ORM SQL queries with PG library\
+-No ORM, SQL queries with PG library
 
 Setup
