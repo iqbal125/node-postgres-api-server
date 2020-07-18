@@ -5,6 +5,7 @@ Companion Server to Decoupled React Gatsby Front End App.
 
 
 ## Features
+-Basic CRUD API routes\
 -Server Side Auth token verification with Firebase Admin\
 -User Sign up Flow\
 -Passport JWT verification\
